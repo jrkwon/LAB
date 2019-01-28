@@ -24,16 +24,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-scipy && \
     rm -rf /var/lib/apt/lists/*
 
-ENV CAFFE_ROOT=/opt/caffe
+ENV CAFFE_ROOT=/wywu/LAB
 WORKDIR $CAFFE_ROOT
 
 # FIXME: use ARG instead of ENV once DockerHub supports this
 # https://github.com/docker/hub-feedback/issues/460
 
-ENV CLONE_TAG=1.0
+# ENV CLONE_TAG=1.0
 
-#RUN git clone https://github.com/jrkwon/LAB.git . && \
-RUN git clone -b ${CLONE_TAG} --depth 1 https://github.com/BVLC/caffe.git . && \
+# RUN git clone -b ${CLONE_TAG} --depth 1 https://github.com/BVLC/caffe.git . && \
+RUN git clone https://github.com/jrkwon/LAB.git . && \
     pip install --upgrade pip && \
     cd python && for req in $(cat requirements.txt) pydot; do pip2 install $req; done && cd .. && \
     git clone https://github.com/NVIDIA/nccl.git && cd nccl && make -j install && cd .. && rm -rf nccl && \
@@ -46,5 +46,5 @@ ENV PYTHONPATH $PYCAFFE_ROOT:$PYTHONPATH
 ENV PATH $CAFFE_ROOT/build/tools:$PYCAFFE_ROOT:$PATH
 RUN echo "$CAFFE_ROOT/build/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
 
-WORKDIR /workspace
+WORKDIR $CAFFE_ROOT/workspace
 
