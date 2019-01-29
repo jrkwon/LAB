@@ -118,6 +118,13 @@ root@0c01adc1d7e7:/wywu/LAB/workspace# cp -r ../workspace_temp/. .
 
 Tada! You're all set.
 
+### Tests
+
+Then, now you can test the model. As of the moment that I am writing this, not all test were successful. 
+
+```
+bash ./scripts/test/run_test_on_wflw.sh final
+```
 
 -------------
 ## DEPRECATED 
