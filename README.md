@@ -17,7 +17,6 @@ nvidia-docker is required. Refer to [this link](https://devblogs.nvidia.com/gpu-
 1. Decide a base folder. In my case, I created the `LAB` folder inside `~/Documents/`. Then create a Dockerfile.
 
 ```
-$ touch Dockerfile
 $ vim Dockerfile
 ```
 
@@ -102,6 +101,26 @@ After length installation process from the previous step, if you see the prompt 
 root@0c01adc1d7e7:/wywu/LAB/workspace#
 ```
 Now, LAB is ready to be used.
+
+
+
+
+### Datasets and Scripts
+
+I prepared the training and test WFLW datasets and modified scripts for you in the Docker image.
+
+Simply copy them to your corrent workspace folder.
+
+```
+root@0c01adc1d7e7:/wywu/LAB/workspace# cp -r ../workspace_temp/. .
+```
+
+Tada! You're all set.
+
+
+-------------
+## DEPRECATED 
+
 
 #### Prepare Datasets and Scripts
 
