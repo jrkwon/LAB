@@ -38,7 +38,7 @@ RUN git clone https://github.com/jrkwon/LAB.git . && \
     cd python && for req in $(cat requirements.txt) pydot; do pip2 install $req; done && cd .. && \
     git clone https://github.com/NVIDIA/nccl.git && cd nccl && make -j install && cd .. && rm -rf nccl && \
     mkdir build && cd build && \
-    cmake -DUSE_CUDNN=1 -DUSE_NCCL=1 .. && \
+    cmake -DUSE_CUDNN=1 -DUSE_NCCL=1 -DUSE_OPENMP=1 .. && \
     make -j"$(nproc)"
 
 ENV PYCAFFE_ROOT $CAFFE_ROOT/python
