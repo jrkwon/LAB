@@ -14,25 +14,25 @@ MODEL=$1
 INPUT_FILE_1_DIR=./datasets/WFLW/WFLW_annotations/list_98pt_test
 mkdir -p ./evaluation/WFLW/WFLW_${MODEL}_result
 
-./build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_largepose.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_largepose.txt --label_num=196 --thread_num=12
+../build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_largepose.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_largepose.txt --label_num=196 --thread_num=12
 echo "list 1 done"
 
-./build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_expression.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_expression.txt --label_num=196 --thread_num=12
+../build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_expression.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_expression.txt --label_num=196 --thread_num=12
 echo "list 2 done"
 
-./build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_illumination.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_illumination.txt --label_num=196 --thread_num=12
+../build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_illumination.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_illumination.txt --label_num=196 --thread_num=12
 echo "list 3 done"
 
-./build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_makeup.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_makeup.txt --label_num=196 --thread_num=1
+../build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_makeup.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_makeup.txt --label_num=196 --thread_num=1
 echo "list 4 done"
 
-./build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_occlusion.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_occlusion.txt --label_num=196 --thread_num=12
+../build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_occlusion.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_occlusion.txt --label_num=196 --thread_num=12
 echo "list 5 done"
 
-./build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_blur.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_blur.txt --label_num=196 --thread_num=12
+../build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test_blur.txt --input_file_2=../meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_blur.txt --label_num=196 --thread_num=12
 echo "list 6 done"
 
-./build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test.txt --input_file_2=./meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_test.txt --label_num=196 --thread_num=12
+../build/tools/alignment_tools run_test_on_wflw --input_file_1=$INPUT_FILE_1_DIR/list_98pt_test.txt --input_file_2=./meanpose/meanpose_71pt.txt --input_folder=./datasets/WFLW/WFLW_images/ --model_path=./models/WFLW/WFLW_${MODEL}/ --output_file_1=./evaluation/WFLW/WFLW_${MODEL}_result/pred_98pt_test.txt --label_num=196 --thread_num=12
 echo "list 7 done"
 
 cat $INPUT_FILE_1_DIR/list_98pt_test_largepose.txt $INPUT_FILE_1_DIR/list_98pt_test_expression.txt $INPUT_FILE_1_DIR/list_98pt_test_illumination.txt $INPUT_FILE_1_DIR/list_98pt_test_makeup.txt $INPUT_FILE_1_DIR/list_98pt_test_occlusion.txt $INPUT_FILE_1_DIR/list_98pt_test_blur.txt $INPUT_FILE_1_DIR/list_98pt_test.txt > ./evaluation/WFLW/WFLW_${MODEL}_result/gt_release.txt
