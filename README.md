@@ -1,4 +1,4 @@
-# Look at Boundary: A Boundary-Aware Face Alignment Algorithm
+# Look at Boundary in Docker: A Boundary-Aware Face Alignment Algorithm
 
 The original LAB git repository is not ready for Docker and has some errors in compiler settings. I added a new Dockerfile, fixed some errors, and added a script to copy the training and testing datasets.
 
